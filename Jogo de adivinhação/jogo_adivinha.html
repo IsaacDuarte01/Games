@@ -12,16 +12,16 @@
        document.write (frase);
        pulaLinha();
     }
-   
-   var numeroPensado = 5;
-   var chute = parseInt (prompt("Digite seu chute"));
+                                                         //Usamos o Math.rund para arredondar esse numero random para nós.
+   var numeroPensado = Math.round (Math.random () * 10); //Usamos a função Math.random para gerar numeros aleatorios, multiplicamos por 10 para limitar as escolhas
+   var chute = parseInt (prompt("Digite seu chute")); 
    
    if (chute == numeroPensado) {
       mostra ("você acertou!");
    }
 
    else {
-      mostra ("Você errou o numero pensado foi " + numeroPensado);
+      mostra ("Você errou o numero pensado foi " + numeroPensado); //Utilizamos o else pois só temos duas possiveis condições.
    }
    
    
