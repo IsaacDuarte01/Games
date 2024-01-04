@@ -6,7 +6,40 @@
 
 <script> 
    
-    var segredos = [5,7,10,2] 
+    function sorteia (){
+
+        return Math.round(Math.random() * 10); //deixamos essa função para que sorteie um numero aleatorio sem a necessidade de copiar e colar 
+    }
+    
+    function sorteiaNUmeros (quantidade){ //vai receber a qntd de numeros aleatorios que eu quero ssortear
+
+        var segredos = [];
+        var numero = 1 //utilizamos o contador pra ele começar com o numero min de tentativa
+
+        while(numero <= quantidade){
+           
+            var numeroAleatorio = sorteia ()
+            var achou = false
+
+            for (var posicao = 0; posicao < segredos.length; posicao ++){
+                if (segredos[posicao] == numeroAleatorio) {
+                    achou = true;
+                    break;
+                }
+            }
+
+        if (achou == false){
+         segredos.push (numeroAleatorio)
+         numero ++;
+             }
+
+         }
+    
+    return segredos;
+        }
+    var segredos = sorteiaNUmeros (5);
+   
+    console.log (segredos);
 
     var input = document.querySelector ("input"); //querySelector puxa uma tag que é passado como parametro do mundo HTML para o mundo JAVA
 
