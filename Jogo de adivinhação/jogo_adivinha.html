@@ -17,14 +17,14 @@
   
    var tentativa = 1;
    
-   while (tentativa <= 3) {
+   while (tentativa <= 3) { //limitamos um numero x de tentativas do usuario 
 
       var chute = parseInt (prompt("Digite seu chute")); 
         
       if (chute == numeroPensado) {
             
          mostra ("você acertou! o numero pensado era " + numeroPensado);
-         break;
+         break; //add o break para interromper o loop assim que o usuario acertar o numero
       }
 
       else {
