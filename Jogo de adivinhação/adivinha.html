@@ -6,7 +6,7 @@
 
 <script> 
    
-    var segredo = 5
+    var segredo = Math.round(Math.random() * 10); //Math.random para gerar um numero aleatorio 
 
     var input = document.querySelector ("input"); //querySelector puxa uma tag que é passado como parametro do mundo HTML para o mundo JAVA
 
@@ -21,6 +21,9 @@
 
             alert("Você errou!!")
         }
+
+        input.value = ""; //definimos o valor do campo como string vazia, para limpar nosso campo após tentativa
+        input.focus(); //chamamos a função FOCUS para nosso campo ganhar foco após a tentativa
     }
 
     var button = document.querySelector ("button");
