@@ -5,10 +5,27 @@
 
 
 <script> 
+   
     var segredo = 5
+
     var input = document.querySelector ("input"); //querySelector puxa uma tag que é passado como parametro do mundo HTML para o mundo JAVA
+
   
+    function verifica (){
     
-    input.value //Valor que foi digitado pelo usuario no INPUT
+         if (input.value == segredo){ //Input.VAlue vai comparar o valor digitado pelo usuario la caixinha do INPUT
+
+            alert("Você acertou");
+            
+        } else {
+
+            alert("Você errou!!")
+        }
+    }
+
+    var button = document.querySelector ("button");
+    button.onclick = verifica; //NOCLICAR com essa função ao clicar no botão ele executa nossa função
+      
+    
 
 </script>
